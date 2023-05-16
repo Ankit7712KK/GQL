@@ -63,8 +63,10 @@ const RootQuery = new GraphQLObjectType({
             args: {id: {type: GraphQLID}},
             resolve(parent,args) {
                 return Project.findById(args.id);
-            }
+            },
+            
         },
+        
 
 
 
@@ -81,9 +83,9 @@ const RootQuery = new GraphQLObjectType({
             args: {id: {type: GraphQLID}},
             resolve(parent,args) {
                 return Client.findById(args.id)
-            }
-        }
-    }
+            },
+        },
+    },
 });
 
 // Mutation
